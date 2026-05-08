@@ -1,0 +1,123 @@
+/* ====== 基础重置 ====== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== 左侧整体侧边栏 ====== */
+#left_box {
+    border-right: 1px solid #333333; /* 分割线改为深灰色，融入暗黑主题 */
+    min-width: 200px;
+    background-color: transparent;
+}
+
+/* ====== 列表标题样式 ====== */
+#lab_devices_title {
+    color: white;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 15px 10px;
+    border-bottom: 2px solid #444444; /* 标题底部的下划线 */
+}
+
+/* ====== 列表控件整体样式 ====== */
+#device_list {
+    background-color: transparent;
+    border: none;
+    outline: none; /* 消除点击选中时的虚线框 */
+}
+
+/* ====== 列表条目基础样式 ====== */
+#device_list::item {
+    min-height: 55px; /* 使用 min-height 撑开高度，解决文字重叠问题 */
+    padding-left: 10px; /* 图标和文字的左边距 */
+    color: #E0E0E0; /* 默认字体颜色（稍微偏灰，不至于太刺眼） */
+    font-size: 14pt;
+    border-bottom: 1px solid #1A1A1A; /* 每行之间的微弱分割线，增加间距感 */
+}
+
+/* ====== 鼠标悬浮状态 (Hover) ====== */
+#device_list::item:hover {
+    background-color: #2A2A2A; /* 鼠标放上去显示深灰背景 */
+    color: #FFFFFF; /* 字体变纯白 */
+}
+
+/* ====== 选中状态 (Selected) ====== */
+#device_list::item:selected {
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    border-left: 4px solid #8AB4F8; /* 左侧增加一条高亮指示条，让选中效果更明显 */
+}
+
+/* ====== 选中且鼠标悬浮状态 ====== */
+#device_list::item:selected:hover {
+    background-color: #155EBF; /* 颜色稍微加深，增加点击反馈 */
+}
+
+/* ====== 彻底隐藏滚动条 ====== */
+#device_list QScrollBar:vertical,
+#device_list QScrollBar:horizontal {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+/* 修改复选框整体和文字颜色 */
+QCheckBox {
+    color: #FFFFFF;
+    font-size: 14px;
+    spacing: 8px; /* 框和文字的间距 */
+}
+
+/* 修改那个方框的样式 */
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #888888;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* 鼠标悬停时的边框颜色 */
+QCheckBox::indicator:hover {
+    border: 1px solid #4CAF50;
+}
+
+/* 选中时的样式 (可以替换为你自己的打勾图片) */
+QCheckBox::indicator:checked {
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+    image: url(:/images/check.png); /* 加上打勾的图标 */
+}
+
+/* 左下角通道切换按钮样式 */
+#btn_channel_1, #btn_channel_4 {
+    width: 36px;             /* 按钮本身的宽度 */
+    height: 36px;            /* 按钮本身的高度 */
+    qproperty-iconSize: 28px 28px; /* 放大内部图标的尺寸，你可以根据需要调整 */
+    border: none;            /* 去掉默认的丑陋边框 */
+    background-color: transparent; /* 背景透明 */
+    border-radius: 4px;      /* 加一点圆角，为悬停效果做准备 */
+}
+
+/* 鼠标悬停时的效果（交互反馈） */
+#btn_channel_1:hover, #btn_channel_4:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* 鼠标放上去时显示淡淡的半透明白底 */
+}
+
+/* 鼠标按下时的效果 */
+#btn_channel_1:pressed, #btn_channel_4:pressed {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 2. 截图按钮（扁平化圆角风格） */
+QPushButton#btn_capture_img {
+    background-color: #555555;
+    color: #FFFFFF;
+    border: 1px solid #777777;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    min-height: 30px;
+}

@@ -1,0 +1,85 @@
+/* 1. 全局窗口背景与通用字体设置 */
+QWidget {
+    background-color: #2D2D30; /* 深灰背景色，贴近目标图 */
+    color: #E0E0E0;            /* 全局文字颜色：浅灰偏白 */
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif; /* 推荐使用微软雅黑 */
+    font-size: 14px;
+}
+
+/* 2. 标签样式 (QLabel) */
+QLabel {
+    background-color: transparent; /* 背景透明 */
+    color: #CCCCCC;                /* 稍微暗一点的白色，避免喧宾夺主 */
+}
+
+QLabel#titleLabel {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f0f0f0;
+    padding: 20px 0;
+}
+*/
+
+/* 3. 文本输入框 (QLineEdit) */
+QLineEdit {
+    background-color: #1E1E1E;     /* 输入框比背景更暗 */
+    border: 1px solid #3F3F46;     /* 极细的深色边框 */
+    border-radius: 4px;            /* 微圆角 */
+    padding: 4px 8px;              /* 内边距，让文字不贴边 */
+    color: #FFFFFF;
+    selection-background-color: #007ACC; /* 选中文字的背景色 */
+}
+
+QLineEdit:focus {
+    border: 1px solid #007ACC;     /* 获取焦点时边框变色，提升交互感 */
+    background-color: #252526;
+}
+
+/* 4. 下拉框 (QComboBox) */
+QComboBox {
+    background-color: #1E1E1E;
+    border: 1px solid #3F3F46;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #FFFFFF;
+}
+
+QComboBox:focus {
+    border: 1px solid #007ACC;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: #3F3F46;
+    border-left-style: solid; /* 下拉按钮的左侧分隔线 */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1E1E1E;
+    border: 1px solid #3F3F46;
+    color: #FFFFFF;
+    selection-background-color: #3399FF;
+}
+
+/* 5. 按钮 (QPushButton) */
+QPushButton {
+    background-color: #3E3E42;     /* 按钮默认背景色 */
+    border: 1px solid #555555;     /* 按钮边框 */
+    border-radius: 4px;            /* 统一的微圆角 */
+    color: #FFFFFF;
+    padding: 6px 20px;             /* 增加左右内边距，让按钮看起来更稳重 */
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #505050;     /* 鼠标悬停变亮 */
+    border: 1px solid #666666;
+}
+
+QPushButton:pressed {
+    background-color: #2D2D30;     /* 点击时下陷变暗 */
+    border: 1px solid #007ACC;     /* 点击时边框高亮 */
+}

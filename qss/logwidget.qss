@@ -1,0 +1,161 @@
+/* =========================================
+   全局背景与文字
+   ========================================= */
+LogWidget {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+}
+
+/* =========================================
+   左侧：日志类型切换按钮 (类似侧边导航栏)
+   ========================================= */
+QPushButton#btn_type_log {
+    background-color: #383838;
+    color: #cccccc;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 120px;
+    margin-bottom: 10px; /* 两个按钮之间留点缝隙 */
+}
+
+QPushButton#btn_type_log:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+QPushButton#btn_type_log:pressed {
+    background-color: #388E3C;
+}
+
+/* 如果你想在C++里实现点击后保持绿色高亮，可以开启按钮的 Checkable 属性，并使用 :checked 伪类 */
+QPushButton#btn_type_log:checked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* =========================================
+   右侧：现代化数据表格
+   ========================================= */
+QTableWidget#table_log {
+    background-color: #2b2b2b;
+    alternate-background-color: #323232; /* 斑马线交替色 */
+    color: #e0e0e0;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none; /* 去除虚线框 */
+}
+
+/* 鼠标悬浮某一行时的颜色 */
+QTableWidget#table_log::item:hover {
+    background-color: #404040;
+}
+
+/* 选中某一行时的高亮颜色 */
+QTableWidget#table_log::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头总体样式 */
+QHeaderView {
+    background-color: #222222;
+    border: none;
+}
+
+/* 表头每一列的样式 */
+QHeaderView::section {
+    background-color: #222222;
+    color: #4CAF50; /* 表头文字使用主题绿 */
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #4CAF50; /* 表头下方加一条绿色分割线 */
+}
+
+/* =========================================
+   表格里的滚动条美化
+   ========================================= */
+QScrollBar:vertical {
+    border: none;
+    background: #2b2b2b;
+    width: 10px;
+    margin: 0px 0 0px 0;
+}
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #4CAF50; /* 悬浮时滚动条变绿 */
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+
+/* =========================================
+   底部：分页控件
+   ========================================= */
+QPushButton#btn_page {
+    background-color: #444444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 25px;
+    font-size: 14px;
+}
+
+QPushButton#btn_page:hover {
+    background-color: #555555;
+}
+
+QPushButton#btn_page:pressed {
+    background-color: #333333;
+}
+
+QLabel#lab_page {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4CAF50; /* 页码使用绿色突出显示 */
+    padding: 0 15px;
+}
+
+/* =========================================
+   1. 表格整体样式美化
+========================================= */
+/* 将表格内的文字统一变成白色 */
+QTableWidget {
+    color: white;
+    /* 取消表格自带的外边框，看起来更现代 */
+    border: none;
+}
+
+/* 选中某一行时的背景色和字体颜色（防止系统默认的高亮色导致白字看不清） */
+QTableWidget::item:selected {
+    background-color: #0078D7; /* 微软经典蓝色 */
+    color: white;
+}
+
+
+/* =========================================
+   2. 底部页数显示标签美化 (#lab_page)
+========================================= */
+#lab_page {
+    color: white;                 /* 字体变白 */
+    font-size: 15px;              /* 稍微放大一点 */
+    font-weight: bold;            /* 加粗更醒目 */
+    background-color: rgba(255, 255, 255, 0.15); /* 加一个半透明的底色框 */
+    border: 1px solid #555555;    /* 加上低调的灰色边框 */
+    border-radius: 5px;           /* 边缘做成圆角，和按钮风格统一 */
+    padding: 4px 20px;            /* 撑开内部空间：上下4px，左右20px */
+    margin: 0px 10px;             /* 和左右的按钮拉开一点间距 */
+}

@@ -1,0 +1,32 @@
+QWidget{
+    background-color: gray;
+}
+
+#title, #ctime, #log_lab{
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#title{
+    font-size: 22pt;
+}
+
+
+QPushButton{
+    color: white;
+    background-color: #444444;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 16pt;
+    font-family = "Microsoft YaHei";
+}
+
+QPushButton:hover{
+    background-color: #888888;
+}
+
+QPushButton: pressed{
+    background-color: #888888;
+}

@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/bg.jpg</file>
+        <file>images/device.png</file>
+        <file>images/monitor.png</file>
+        <file>images/no_camera.png</file>
+        <file>images/register.png</file>
+        <file>images/set.png</file>
+        <file>images/video.png</file>
+        <file>images/video_wrong.jpg</file>
+        <file>images/w1.png</file>
+        <file>images/w4.png</file>
+        <file>qss/monitorwidget.qss</file>
+        <file>qss/top_window.qss</file>
+        <file>qss/videowidget.qss</file>
+        <file>qss/settingwidget.qss</file>
+        <file>images/check.png</file>
+        <file>images/close.png</file>
+        <file>images/continue.png</file>
+        <file>images/pause.png</file>
+        <file>images/log.png</file>
+        <file>qss/logwidget.qss</file>
+    </qresource>
+</RCC>
