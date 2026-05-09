@@ -26,19 +26,30 @@ DbConn::DbConn()
     //注册MYSQL驱动
     db = QSqlDatabase::addDatabase("QMYSQL");
 
+    QSettings settings("db_config.ini", QSettings::IniFormat);
+    settings.beginGroup("Database");
+    this->hostname = settings.value("hostname").toString();
+    this->dbname = settings.value("dbname").toString();
+    this->username = settings.value("username").toString();
+    this->password = settings.value("password").toString();
+    this->port = settings.value("port").toInt();
+
     //设置连接参数
-    db.setHostName("localhost");
-    db.setPort(3306);
-    db.setUserName("root");
-    db.setPassword("123456");
-    db.setDatabaseName("monitor_db");
+    db.setHostName(this->hostname);
+    db.setDatabaseName(this->dbname);
+    db.setUserName(this->username);
+    db.setPassword(this->password);
+    db.setPort(this->port);
 
     //打开连接
     if(!db.open()){
         qDebug() << "数据库打开失败" << db.lastError().text();
+        return;
+    }else{
+        qDebug() << "数据库打开成功";
     }
 
-    qDebug() << "数据库打开成功";
+
 }
 
 DbConn::~DbConn()

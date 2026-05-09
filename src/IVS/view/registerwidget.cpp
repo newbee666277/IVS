@@ -32,7 +32,9 @@ RegisterWidget::RegisterWidget(QWidget *parent)
     //用户名即密码
     user_edit = new QLineEdit;
     pwd_edit = new QLineEdit;
+    pwd_edit->setEchoMode(QLineEdit::Password);
     pwd_ensure_edit = new QLineEdit;
+    pwd_ensure_edit->setEchoMode(QLineEdit::Password);
     QLabel* label_user = new QLabel("用户名");
     label_user->setStyleSheet("color: white;");
     QLabel* label_pwd = new QLabel("密  码");

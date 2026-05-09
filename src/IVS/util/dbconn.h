@@ -6,6 +6,7 @@
 #include <QSqlQuery>
 #include <QCryptographicHash>
 #include <QMutex>
+#include <QSettings>
 
 class DbConn
 {
@@ -23,6 +24,11 @@ private:
     ~DbConn();
     static DbConn* instance;
     QSqlDatabase db;
+    QString hostname;
+    QString dbname;
+    QString username;
+    QString password;
+    int port;
 };
 
 #endif // DBCONN_H
